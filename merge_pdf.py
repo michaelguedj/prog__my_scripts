@@ -9,8 +9,8 @@ from PyPDF2 import PdfFileMerger
 
     Description:
     -------------
-    This program is part of prog__my_scripts
-    It merges the pdf files:
+    This program is part of: prog__my_scripts
+    It merges the PDF files:
     -- presents in the working directory;
     -- named: tp0.pdf, tp1.pdf, tp2.pdf, ...
     The resulting file is named: "_tp_.pdf"
@@ -32,7 +32,7 @@ if __name__ == "__main__":
     # knowing that the PDF files are named:
     # tp0.pdf, tp1.pdf, ...
     sorted_pdf_to_merge = []
-    n = len(pdf_to_merge) # number of the intput PDF files
+    n = len(pdf_to_merge) # number of the input PDF files
     for i in range(n):
         sorted_pdf_to_merge.append(\
             "tp"+str(i)+".pdf")
