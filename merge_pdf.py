@@ -1,4 +1,5 @@
 
+import sys
 import glob
 from PyPDF2 import PdfFileMerger
 
@@ -24,11 +25,13 @@ def merger(sorted_pdf_to_merge, pdf_resulting):
  
     with open(pdf_resulting, 'wb') as fileobj:
         pdf_merger.write(fileobj)
- 
+
+		
 if __name__ == "__main__":
     pdf_resulting = "_tp_.pdf"
     pdf_to_merge = glob.glob('tp*.pdf')
-    # Sorting Stage
+	
+    # -- Sorting Stage
     # knowing that the PDF files are named:
     # tp0.pdf, tp1.pdf, ...
     sorted_pdf_to_merge = []
@@ -36,5 +39,15 @@ if __name__ == "__main__":
     for i in range(n):
         sorted_pdf_to_merge.append(\
             "tp"+str(i)+".pdf")
-    #print(sorted_pdf_to_merge)
+
+    # -- Verification
+    # that the list sorted_pdf_to_merge contains
+    # the actual files put in pdf_to_merge
+    intersection = set(sorted_pdf_to_merge) & set(pdf_to_merge)
+    if len(intersection) != n:
+        print("Error: the PDF files presents in the working", end=" ")
+        print("directory do not follow the naming:")
+        print("tp0.pdf, tp1.pdf, tp2.pdf, ...")
+        sys.exit("Abort of the running.")
+        
     merger(sorted_pdf_to_merge, pdf_resulting)
