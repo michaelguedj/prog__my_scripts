@@ -7,6 +7,10 @@ from PyPDF2 import PdfFileMerger
     Name:
     --------
     merge_pdf.py
+	
+	Author:
+	---------
+	Dr Michael GUEDJ
 
     Description:
     -------------
