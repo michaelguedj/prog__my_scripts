@@ -8,9 +8,9 @@ from PyPDF2 import PdfFileMerger
     --------
     merge_pdf.py
 	
-	Author:
-	---------
-	Dr Michael GUEDJ
+    Author:
+    ---------
+    Dr Michael GUEDJ
 
     Description:
     -------------
