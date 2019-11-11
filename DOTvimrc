@@ -1,0 +1,30 @@
+
+" AFFICHE LES NUMEROS DE LIGNE
+set nu 
+
+" INDENTATION
+syn on
+syntax on
+filetype indent on
+
+" TAILLE DES TABULATIONS
+set tabstop =4
+set shiftwidth =4
+set softtabstop =4
+
+" AFFICHER LA LIGNE CONTENANT LE CURSEUR
+"set cursorline
+
+" AFFICHER LES PARENTHESES CORRESPONDANTES
+set showmatch
+
+" JEDI
+"let g:jedi#popup_on_dot = 0
+
+" EXECUTE PYTHON DANS VIM
+" -- DEVELOPPEMENT
+"noremap <F5> :w<CR>:!python3 %<CR>
+"inoremap <F5> <ESC>:w<CR>:!python3 %<CR>
+" -- ENSEIGNEMENT
+noremap <F5> :w !python3 %<CR>
+inoremap <F5> <ESC>:w !python3 %<CR>
